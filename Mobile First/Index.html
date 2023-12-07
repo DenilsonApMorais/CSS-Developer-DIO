@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First</title>
+    <style>
+      
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav > ul{
+            margin: 0px;
+            padding: 0px;
+            display: flex; 
+            flex-direction: column;
+            gap: 4px;
+        }
+        li > a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav >ul> li{
+            background-color: lightgreen;
+            list-style: none;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        #skills {
+            background-color: lightgreen;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+        #skills li{
+            list-style: decimal;
+        }
+        #education{
+            background-color: lightblue;
+            border: 1px solid blue;
+            border-radius: 4px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        @media screen and (min-width:720px){
+           main{
+            flex-direction: row;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 16px auto;
+            flex-wrap: wrap;
+           }
+        
+        #presentation{
+            flex-basis: 500px;
+        }
+        #skills, #education{
+            flex: 1;
+        }
+        nav ul {
+            flex-direction: row;
+        }
+        nav ul li {
+            flex: 1;
+            text-align: center;
+        }
+    }
+    </style> 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Conheça meu trabalho</a></li>
+                <li><a href="#">LinkedIn</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="presentation">
+            <h1>Denilson Morais</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi optio eos blanditiis soluta asperiores quae eum iusto esse, dolore deserunt architecto numquam voluptatem quibusdam deleniti est, impedit veritatis minima consequatur.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi optio eos blanditiis soluta asperiores quae eum iusto esse, dolore deserunt architecto numquam voluptatem quibusdam deleniti est, impedit veritatis minima consequatur.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi optio eos blanditiis soluta asperiores quae eum iusto esse, dolore deserunt architecto numquam voluptatem quibusdam deleniti est, impedit veritatis minima consequatur.</p>
+        </section>
+        <section id="skills">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>javascript</li>
+                <li>C++</li>
+
+            </ul>
+        </section>
+        <section id="education">
+            <ul>
+                <li>Bacharelado em Engenharia da Computação</li>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 200px);
+
+            row-gap: 10px;
+            column-gap: 20px;
+            /* gap: 10px 20px;  ou podemos usar essa*/
+            /*Podemos definir o alinhamento horizontal e vertical*/
+            align-items: stretch;
+            justify-items:stretch;
+            /*para alinhar o conteudo dentro da célula usamos:*/
+            place-items: center; /*é uma short hand de align-itens e justify-itens*/ 
+
+            /*justify-content: space-around;
+            align-content: space-around;*/
+            /*o short hand para essa propriedade é:*/
+            place-content: space-around; 
+        }
+        .item1{
+            background-color: blueviolet;
+            justify-self:stretch; /*permite alinhar cada item separadamente*/
+            align-self: stretch;
+
+          /*  place-self: stretch; short hand do justify self e align self */
+        }
+        .item2{
+            background-color: lightgreen;
+        }
+        .item3{
+            background-color: lightgrey;
+        }
+        .item4{
+            background-color: red;
+        }
+        .item5{
+            background-color: orange;
+        }
+        .item6{
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">elemento1</div>
+    <div class="item2">elemento2</div>
+    <div class="item3">elemento3</div>
+    <div class="item4">elemento4</div>
+    <div class="item5">elemento5</div>
+    <div class="item6">elemento6</div>
+</body>
+</html>

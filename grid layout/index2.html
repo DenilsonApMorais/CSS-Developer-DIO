@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            border:1px solid black;
+            grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr); 
+            grid-template-rows: 50px 100px 200px;
+            
+        }
+        .item{
+            background-color: lightgrey;
+            text-align: center;
+            /*OBS: quando trato de linhas eu falo realmenta da linha(da aresta e não da célula(linha é horizontal e coluna é a linha na vertical))*/
+            grid-column-start: 2; /* seleciona a coluna onde o objeto começa e onde termina*/
+            grid-column-end: 5;
+            grid-row-start: 1;   /*seleciona a linha onde o objeto começa e termina */
+            grid-row-end: 3;
+        }
+        .item2{
+            background-color: lightblue;
+            text-align: center;
+            /*OBS: quando trato de linhas eu falo realmenta da linha(da aresta e não da célula(linha é horizontal e coluna é a linha na vertical))*/
+            grid-column-start: 1; /* seleciona a coluna onde o objeto começa e onde termina*/
+            grid-column-end:  span 3; /*podemos usar span para falar quantas celulas iremos preencher*/
+           /* grid-column: 1/ span 3; ou podemos usar */
+            grid-row-start: 2;   /*seleciona a linha onde o objeto começa e termina */
+            grid-row-end: 4;
+            /*grid-row: 2/ 4;*/
+            /* agrupamento de propriedade dessa propriedade é o grid-area, e vai seguir a seguinte ordem:
+                      grid-row-start / grid- column-start / grid-row-end / grid-column-end*/
+            grid-area: 2 / 1 / 4 / span 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--<div class="item "> Elemento</div>-->
+        <div class="item2 "> Elemento2</div>
+    </div>
+    
+</body>
+</html>

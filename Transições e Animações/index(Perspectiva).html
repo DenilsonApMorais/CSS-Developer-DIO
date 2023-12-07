@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições e Animações</title>
+    <style>
+        body{
+            height: 540px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            perspective: 500px;
+
+            /*perspective-origin: left;*/
+        }
+        .bol,.bol2,.bol3{
+            background: linear-gradient(to left, red, yellow);
+            width: 150px;
+            height: 150px;
+            border-radius:50%;
+            
+        }
+        .bol2{
+            border-radius: 10px;  
+        }
+        .bol:hover{
+            transform: translate(5px,5px);
+            background: linear-gradient(to right, red, yellow);
+        }
+        /*
+        .bol2:hover{
+            transform: rotate(50deg);
+            background: linear-gradient(to right, red, yellow);
+        }
+        */
+        .bol2:hover{
+            transform: skew(20deg); /*pode ser usado */
+            background: linear-gradient(to right, red, yellow);
+        }
+        
+        .bol3:hover{
+            transform: scale(0.98);
+            background: linear-gradient(to right, red, yellow);
+        }
+        /*
+        .bol2:hover{
+            /*
+            scaleX()
+            skewY()
+            skewX()
+            scaleY()
+            translateX()
+            translateY()
+            
+            transform: matrix(1.2, 0, 0, 1, 0, 0);
+        }*/
+        .tresd{
+            background:linear-gradient(yellow, red);
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+
+        }
+        .tresd:hover{
+            transform: rotateX(30deg);
+
+        }
+    </style>
+</head>
+<body>
+    <p>Passe o mouse sobre os elementos</p>
+    <div class="bol"></div>
+    <br> <br>
+    <div class="bol2"></div>
+    <div class="bol3"></div>
+
+    <p>Site para criar transform CSS de forma automática</p>
+    <a href="https://angrytools.com/css-generator/transform/" target="_blank">Link</a>
+    <p>Também temos a propriedade matrix que pode juntar todas as transformações</p>
+    <hr>
+
+    <div class="tresd">Lembre-se a perspectiva é sempre no elemento pai </div>
+
+</body>
+</html>

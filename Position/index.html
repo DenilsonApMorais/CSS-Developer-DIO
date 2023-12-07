@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: auto;
+        }
+        .image{
+            background-image: url(./assets/image/evo.jpg);
+            width: 800px;
+            height: 600px;
+            border: 1px solid black;
+           
+            background-position: center top 10px ;
+            background-repeat: no-repeat;
+            margin-bottom:20px ;
+            
+        }
+        .attach{
+            background-image: url(./assets/image/evo.jpg);
+            width: 320px;
+            height: 480px;
+            border: 1px solid black;
+            background-size: cover;
+            background-attachment: local; /* fixed o fundo nao se move ativa barra de rolagem nem move a rolagem externa/ local o fundo se move. e preenche todo os espaco do conteúdo / scroll cria uma barra de rolagem e rola na rolagem externa a div tbm  */
+            background-position: center top 10px ;
+            background-repeat: no-repeat;
+            overflow: auto;   /* cria uma barra de rolagem pro conteudo caber dentro da div*/
+
+        }
+        .mit{
+            margin-top: 20px;
+            background-image: url(assets/image/evo.jpg);
+            background-color:rgba(229, 255, 0, 0.651);
+            background-blend-mode: saturation;
+            width: 600px;
+            height: 400px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top 10px ;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image">
+         
+    </div>
+    <div class="attach">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero est, architecto obcaecati illo illum omnis tenetur earum doloribus quis incidunt aut reiciendis at nisi molestiae qui aliquid impedit, voluptatibus aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsa soluta iste tempora fugit expedita ullam minima veritatis officiis modi saepe quod laudantium cum commodi, harum necessitatibus velit ab nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae velit ad fuga vel distinctio inventore, quasi adipisci consectetur, ratione optio qui quo sed expedita hic voluptas. Ducimus, accusamus illum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex neque nesciunt natus dolore quam, temporibus quaerat voluptate quod optio officiis molestiae inventore hic iusto, animi deleniti, architecto a eius. Voluptatem! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eligendi voluptatibus laudantium totam quisquam sint cum similique in dolor dignissimos, ipsum molestiae distinctio vel ullam quibusdam aliquid, dicta corporis est?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi earum provident, excepturi consequatur cum rerum quia saepe nemo magni, ipsa ad nesciunt sunt mollitia a et placeat iste enim beatae!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero est, architecto obcaecati illo illum omnis tenetur earum doloribus quis incidunt aut reiciendis at nisi molestiae qui aliquid impedit, voluptatibus aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsa soluta iste tempora fugit expedita ullam minima veritatis officiis modi saepe quod laudantium cum commodi, harum necessitatibus velit ab nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae velit ad fuga vel distinctio inventore, quasi adipisci consectetur, ratione optio qui quo sed expedita hic voluptas. Ducimus, accusamus illum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex neque nesciunt natus dolore quam, temporibus quaerat voluptate quod optio officiis molestiae inventore hic iusto, animi deleniti, architecto a eius. Voluptatem! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat eligendi voluptatibus laudantium totam quisquam sint cum similique in dolor dignissimos, ipsum molestiae distinctio vel ullam quibusdam aliquid, dicta corporis est?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi earum provident, excepturi consequatur cum rerum quia saepe nemo magni, ipsa ad nesciunt sunt mollitia a et placeat iste enim beatae!</p>
+       
+    </div>
+    <div class="mit">
+
+    </div>
+</body>
+</html>

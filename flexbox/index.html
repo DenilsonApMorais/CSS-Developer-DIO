@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex; 
+            background-color:lightgrey;
+            padding: 20px; 
+            flex-direction: row;
+            margin-bottom: 10px;
+            justify-content:center; /*temos vários valores consultar!!*/
+            /*align-items: center; /*Temos também*/
+            /*align-content: normal; /*quando temos muitos itens*/
+            column-gap: 10px; /*como se fosse o padding vai dar um espaço entre os elementos*/ 
+           
+        }
+        .container2{
+            display: flex;
+            background-color:lightgrey;
+            padding: 20px;
+
+            flex-direction: column;
+            flex-wrap: wrap; /*Ajusta os itens em mais de uma coluna quando temos altura máxima.*/
+            /*podemos usar também a propriedade flex-flow: column wrap; e teremos o mesmo efeito*/
+            max-height: 400px;
+            row-gap: 10px; /*como se fosse o padding vai dar um espaço entre os elementos*/ 
+        }
+        .iten{
+            background-color: lightslategrey;   
+            /*os itens podem ser ordenados usando a propriedade order começando por 0 lembrando que 
+            é necessário criarmos uma classe ou ID para o item*/
+            order:1000; /* Para a ordem funcionar setamos todos os itens com valor maior para que os selecionados fiquem em primeiro neste caso o 4 e o 5 foram setados com ordem 1 e o restante esta com 1000 propositalmente*/
+            flex-grow: 1; /*os itens ocupam p tamanho total do container
+                       2  faz o que o item de tamanho 2 tenha o dobro do tamanho(caso tenha espaço disponível para crescimento)
+                       flex-shrink: 1; define o quanto.
+                       */
+           /*A propriedade flex também tem o shorthand que seria na forma: flex: grow shrink basis*/           
+        }
+        #primeiro{
+            order:1;
+            background-color: lightslategrey;   
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    
+        <div class="iten">Link01</div>
+        <div class="iten">Link02</div>
+        <div class="iten">Link03</div>
+        <div class="iten" id="primeiro">Link04</div>
+        
+    </div>
+    <div class="container2">
+    
+        <div class="iten">Link01</div>
+        <div class="iten">Link02</div>
+        <div class="iten">Link03</div>
+        <div class="iten">Link04</div>
+        <div class="iten" id="primeiro">Link05</div>
+        <div class="iten">Link06</div>
+        <div class="iten">Link07</div>
+        <div class="iten">Link08</div>
+        <div class="iten">Link09</div>
+        <div class="iten">Link10</div>
+        <div class="iten">Link11</div>
+        <div class="iten">Link12</div>
+        
+    </div>
+</body>
+</html>

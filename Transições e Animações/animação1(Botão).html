@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animação 1</title>
+    <style>
+        body ,body > div{
+            margin: 0;
+            height: 100vh;
+            background-color: white;
+            display: flex;   
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        button{
+            padding: 12px 24px;
+            border: none;
+            color: white;
+            background: linear-gradient(90deg, #d53369, #daae51);
+            box-shadow: 8px 12px 7px lightgray;
+            font-size: 1.5rem;
+            border-radius: 4px;
+            animation: wiggle 2s linear infinite;
+    
+        }
+        button:hover{
+            cursor: pointer;
+            filter: brightness(1.1);
+            
+        }
+        @keyframes wiggle {
+            0%{
+                transform: rotate(0);
+            }
+            15%{ 
+                transform: rotate(-15deg);
+            }
+            20%{
+                transform: rotate(10deg);
+            }
+            25%{
+                transform: rotate(-10deg );
+            }
+            30%{
+                transform: rotate(10deg);
+            }
+            35%{
+                transform: rotate(-10deg);
+            }
+            40%,100%{
+                transform: rotate(0);
+            }
+        }
+        .loader{
+            border: 5px solid #d53369;
+            border-radius: 50%;
+            margin: 8px;
+            animation: loader .8s ease-in-out alternate infinite;
+        }
+        .loader:nth-child(1){
+            animation: loader .8s ease-in-out alternate infinite;
+        }
+        .loader:nth-child(2){
+            animation: loader .8s ease-in-out .3s alternate infinite;
+        }
+        .loader:nth-child(3){
+            animation: loader .8s ease-in-out .6s alternate infinite;
+        }
+
+
+        @keyframes loader{
+            to {
+                transform: scale(1.8);
+            }
+             
+        }
+
+    </style>
+</head>
+<body>
+    <button>Clique Aqui</button>
+    
+    <div>
+        <span class="loader"></span>
+        <span class="loader"></span>
+        <span class="loader"></span>
+    </div>
+    
+</body>
+</html>

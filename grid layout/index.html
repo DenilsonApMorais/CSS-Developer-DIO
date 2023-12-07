@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 10% 80% 10%; /* duas colunas dois valores*/
+            /*grid-template-columns: repeat(2,80px);caso tivéssemos muitas colunas poderiamos usar a função repeat pa falar quantas vezes repetir o tamanho das colunas*/
+           /* grid-template-columns: 200px repeat(2,80px) 200px;  podemos combinar o repeat com os valores*/
+            grid-template-rows: 150px; /* tres linhas tres valores*/
+            /*grid-auto-rows: 100px;/*permite que a novas linha que são criadas automaticamente tenham 100px de tamanho*/
+            grid-auto-flow: row; /*quando adicionarmos novos itens eles serão adicionados em colunas*/  
+        }
+        div{
+            border: 1px solid black;
+           
+        }
+        .item1{
+            background-color: chocolate;
+            position: sticky;
+            top:10px;
+        }
+        .item2{
+            height: 100%;
+            background-color:blue;
+            grid-template-rows: 2;      
+        }
+        .item3{
+            position: sticky;
+            top: 10px;
+            background-color: lightgray;
+        }
+        .item4{
+            background-color:darkslategray; 
+            height: 100vh;
+        }
+        .item6{
+            background-color:thistle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div  class="item1">Elemento1</div>
+        <div  class="item2">Elemento2</div>
+        <div  class="item3">Elemento3</div><div></div>
+        
+        <div  class="item4">Elemento4</div>
+        <!--
+        <div  class="item4">Elemento4</div>
+        <div  class="item5">Elemento5</div>
+        <div  class="item6">Elemento6</div>
+        -->
+    </div>
+    </body>
+</html>

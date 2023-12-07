@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo clases</title>
+    <style>
+        :root{ /*Root é raiz, considera todo o documento html. podiamos usar "html" ao invéz de root*/
+            background-color: lightgray;
+        }
+        .botao1{
+           /* border-style: none;*/
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .botao1:hover{
+            background-color: lightblue;
+            cursor: pointer; /*Permite que apareca a maõzinha quando o mouse está encima do botão*/
+        }  
+        .botao1:active{
+            margin: 2px;
+        }
+        .email:focus{
+            background-color: lightgray;
+        }
+        label:focus-within{
+            font-weight: bold;
+        }
+        h2:target{
+            background-color: yellow;
+        }
+        section a:link{
+            color: blue;
+
+        }
+        section a:visited{
+            color:black;
+
+        }
+        div input:placeholder-shown{
+            background-color: lightgreen;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .caixa input:checked{
+            box-shadow:  0  0  5px 2px yellow;
+            accent-color:yellow; /*muda a cor do colorido da caixinha*/ 
+            
+        }
+        input:required{
+            border-color: red;
+        }
+        input:optional{
+            border-color: blue;
+        }
+        input:-webkit-autofill{
+            border-color: green;
+        }
+        .corsim_cornao ,.corsim_cornao2 > ul {
+            background-color: white;
+            border: 1px solid black;
+            list-style-type: none;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        /*nth-child permite fazer o cor sim cor não*/
+        .corsim_cornao > ul :nth-child(even){ /*no lugar de even poderiamos usar odd (impar ou par)*/
+
+            background-color: lightblue;
+        }
+        .corsim_cornao2 > ul :nth-of-type(3n){ /*Podemos pegar de 3 em três usando 3n*/
+            background-color: lightblue;
+        }
+        .primeiroDoTipo :first-of-type{ /*Também temos o last-of type*/
+            background-color:yellowgreen;
+            border: 1px solid black;
+        }
+
+        .agrupandoSeletores :is(h1, p, ul){
+            color:sienna;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo classes</h1>
+    <p>Quando passar o mouse por cima do botão a propriedade <code>hover</code> permite que estilizemos o nosso botão conforme desejado. Neste caso mudamos a cor</p>
+    <p>A propriedade <code>cursor: pointer;</code> Permite aparecer uma mão ao passar o mouse encima do botão</p>
+    <button class="botao1">Enviar</button>
+    <hr><br>
+    <p>Quando estamos com determinado elemento selecionado, como a caixa e de Email por exemplo. Podemos estiliza-la usando a propriedade <code>focus</code>.</p>
+    <p>Com a propriedade <code>focus-within</code> podemos pegar um elemento ascendente como no caso do label em que clicamos e marcamos a palavra email com negrito</p>
+    <form action="#">
+        <label>Email
+        <input type="text" class="email"> 
+    </label>
+    </form>
+    <hr>
+    <h1>texto qualquer</h1>
+    <a href="#cap1">link1</a>
+    <a href="#cap2">link2</a>
+    <p>
+        Esta propriedade serve para marcar um paragrafo quando clicar em um link que corresponde a ele. Como acontece nos Sumários
+    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 id="cap1">Paragrafo 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae et pariatur nulla ea rem neque consectetur veritatis, quo culpa nemo laudantium magni placeat! A fugit unde odit quos voluptatum.</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 id="cap2">Paragrafo 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae et pariatur nulla ea rem neque consectetur veritatis, quo culpa nemo laudantium magni placeat! A fugit unde odit quos voluptatum.</p>
+    <hr>
+    <p>esta propriedade permite estilizar a cor de um link quando ele nunca foi clicado e quando já foi clicado com : <code> link </code>Para link nunca visitados e <code>visited</code> para links que ja foram visitados</p>
+    <section>
+        <a href="https://www.google.com.br">Google</a>
+        <a href="https://www.youtube.com/">YT</a>
+        <a href="https://instagram.com">Insta</a>
+    </section>
+    <hr>
+
+    <div>
+        <p>Quando um placeholder estiver a mostra em uma caixa de texto podemos estiliza-la</p>
+        <label for="">Input de teste para placeholder</label>
+        <input type="text" placeholder="Texto aleatório">
+    </div>
+    <hr>
+
+    <p>Podemos estilizar a caixinha do checkbox com o <code>checked.</code></p>
+    <div class="caixa">
+        <input type="checkbox"name="check">Opção 1 <br>
+        <input type="checkbox"name="check">Opção 2 <br>
+        <input type="checkbox"name="check">Opção 3 <br>
+        <input type="checkbox"name="check">Opção 4 <br>
+    </div>
+
+    <hr>
+    <div>
+        <p>Quando um input for required podemos estiliza-lo </p>
+        <form action="#" autocomplete="on"> 
+            <label>Email</label>
+            <input type="email" required>
+
+            <label >Enviar</label>
+            <input type="submit" value="enviar">
+        </form>
+        <br> <br>
+    </div>
+    <div class="corsim_cornao">
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+            <li>Elemento 7</li>
+            <li>Elemento 8</li>
+            <li>Elemento 9</li>
+            <li>Elemento 10</li>
+        </ul>
+    </div>
+    <div class="corsim_cornao2">
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+            <li>Elemento 7</li>
+            <li>Elemento 8</li>
+            <li>Elemento 9</li>
+            <li>Elemento 10</li>
+        </ul>
+    </div>
+
+    <div class="primeiroDoTipo">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum consectetur numquam inventore ratione placeat omnis, hic doloribus velit, fugiat natus optio expedita delectus deserunt ullam sed minus, suscipit blanditiis nobis!
+        </p>
+        
+    </div>
+
+    <hr>
+    <div class="agrupandoSeletores">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non autem tempore in assumenda quisquam! Eaque voluptas reiciendis ab laboriosam illo ratione. Quasi earum necessitatibus, aliquid mollitia consectetur voluptatem placeat reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate! Nisi quae nam quidem et magni harum, voluptates officiis suscipit sit est nihil adipisci quisquam eius deserunt omnis eveniet quos.</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ul>
+    </div>
+
+</body>
+</html>

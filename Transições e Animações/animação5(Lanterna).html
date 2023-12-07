@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação 5</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222;
+            perspective: 300px;
+            
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4rem;
+            text-align: center;
+        }
+        .box{
+            background:linear-gradient(90deg, #FC4668, #3F5EFB);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            animation: example 5s infinite alternate;
+            filter: blur(100px);
+            position: absolute;
+        }
+        @keyframes example {
+            0%{
+                transform: rotateY(30deg) rotate(-25deg) translateZ(100px);
+            }
+            25%{
+                transform: rotate(-30deg) translateZ(100px);
+            }
+            50%{
+                transform: rotateX(-50deg) translateZ(-100px);
+            }
+            75%{
+                transform: rotateX(-50deg) translateZ(-100px);
+            }
+            100%{
+                transform: rotateX(20deg) translateZ(0);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <h1>Denilson Morais</h1>
+</body>
+</html>

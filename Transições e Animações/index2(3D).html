@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 500px;
+            perspective-origin: top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            transform-style: preserve-3d; /*objeto parece estar um dentro do outro lembrar de colocar a posição absoluta e na caixa e a transformação style e sempre no pai*/
+            
+        }
+        .box,.box2{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+           
+        }
+        .box{
+            background: linear-gradient(yellow, red);
+            transform: rotateY(40deg);
+            border-radius: 8px;
+
+        }
+        .box2{
+            background: linear-gradient(gray, blue);
+            transform: rotateY(-40deg);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    
+</body>
+</html>

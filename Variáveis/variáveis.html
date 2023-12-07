@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+    <style>
+        /*variável criada para alterar a cor.
+        criada dentro do seletor root para funcionar de forma global */
+        :root{
+            --bgColor:lightgray;
+            --size:2rem;
+            --fonte:arial;
+        }
+        body{
+            background-color: var(--bgColor);
+            font-size:var(--size);
+            font-family: var(--fonte);
+        }
+        h1::selection{
+            background-color: gray;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            
+        }
+        .box-border{
+            background-color: red;
+            font-size: 1.2rem;
+            text-align: justify;
+            padding: 5px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Título para páginas HTML</h1>
+
+    <div class="box box-border"> Assim um elemento pode ter mais de uma classe</div>
+</body>
+</html>

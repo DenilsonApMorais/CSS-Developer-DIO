@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{ /*pega primeira letra */
+            background-color: yellow;
+        }
+        p::first-line{  /*pega primeira linha */
+            text-transform: uppercase;
+        }
+        summary::marker{ /*Conteúdo adicionado*/
+            content: "😍";
+        }
+        p::selection{  /*muda a cor do texto quando selecionado*/
+            background-color: yellow;
+            
+        }
+        input::file-selector-button{ /*estiliza o botão do seletor de upload de arquivos*/
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste de pseudo elementos</h1>
+    <p>Neste pseudo elemento a primeira letra de um paragrafo pode ser estilizada semque colocamos algo no html editamos isso apenas por aqui.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima omnis placeat fuga, delectus earum, quaerat obcaecati veritatis tempora optio vitae error neque in velit, consequatur eaque adipisci tempore vel iure.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, eum perspiciatis? Inventore suscipit, repudiandae ex assumenda dignissimos tenetur provident odio, id esse eos reiciendis ratione quia ducimus doloribus fuga quisquam?</p>
+    <details>
+        <summary>Tópico</summary> 
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+        
+    </details>
+    login: <input type="text" placeholder="abr">
+    Envie seu arquivo: <input type="file">
+
+    
+    
+</body>
+</html>

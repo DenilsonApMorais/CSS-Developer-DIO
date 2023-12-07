@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        *{
+            background-color: lightblue
+        }
+
+        .externa{
+            background-color:blue;
+            width: 50%;
+            height: 50%;
+        }
+        .interna{
+            background-color:yellow;
+            width: 50%;
+            height: 50%;
+        }
+      
+    </style>
+</head>
+<body>
+    <p>As medidas relativas como a porcentagem são relativas a tag pai quando coloquei 50% na div externa é 50 do body</p>
+    <p>quando coloquei 50% na div interna é 50% da largura e altura da vid externa</p>
+    <div class="externa">Externa
+        <div class="interna">interna</div>
+    </div>
+</body>
+</html>
